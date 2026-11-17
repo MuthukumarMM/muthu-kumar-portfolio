@@ -76,7 +76,7 @@ export default function About() {
                       return <Icon size={16} />;
                     })()}
                   </div>
-                  <p className="text-base leading-relaxed text-slate-300 sm:text-lg">
+                  <p className="text-base leading-relaxed text-brand-800/85 sm:text-lg">
                     {para}
                   </p>
                 </div>

@@ -36,7 +36,7 @@ function MouseGlow() {
   return (
     <motion.div
       style={{ x: springX, y: springY }}
-      className="pointer-events-none fixed z-[5] hidden h-[400px] w-[400px] rounded-full bg-brand-600/8 blur-[100px] lg:block"
+      className="pointer-events-none fixed z-[5] hidden h-[400px] w-[400px] rounded-full bg-brand-500/10 blur-[100px] lg:block"
       aria-hidden
     />
   );

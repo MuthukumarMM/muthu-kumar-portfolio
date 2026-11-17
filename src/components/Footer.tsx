@@ -33,10 +33,10 @@ export default function Footer() {
                 M
               </span>
               <div className="text-left">
-                <p className="font-display text-base font-semibold text-white">
+                <p className="font-display text-base font-semibold text-brand-900">
                   Muthu Kumar M
                 </p>
-                <p className="text-xs text-slate-500">Software Developer | Java Programmer</p>
+                <p className="text-xs text-brand-700/70">Software Developer | Java Programmer</p>
               </div>
             </button>
           </div>
@@ -47,7 +47,7 @@ export default function Footer() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm text-slate-400 transition-colors hover:text-brand-300"
+                className="text-sm text-brand-700/75 transition-colors hover:text-brand-500"
               >
                 {link.label}
               </button>
@@ -88,7 +88,7 @@ export default function Footer() {
         <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         {/* Bottom bar */}
-        <div className="mt-6 flex flex-col items-center justify-between gap-3 text-sm text-slate-500 sm:flex-row">
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 text-sm text-brand-700/65 sm:flex-row">
           <p>
             &copy; {year} Muthu Kumar M. All rights reserved.
           </p>
@@ -98,7 +98,7 @@ export default function Footer() {
             viewport={{ once: true }}
             className="flex items-center gap-1.5"
           >
-            Built with <Heart size={13} className="text-brand-400" /> using React &amp; Framer Motion
+            Built with <Heart size={13} className="text-brand-500" /> using React &amp; Framer Motion
           </motion.p>
         </div>
       </div>

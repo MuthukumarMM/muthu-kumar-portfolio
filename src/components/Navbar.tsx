@@ -56,7 +56,13 @@ export default function Navbar() {
             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-electric-500 font-display text-lg font-bold text-white shadow-lg shadow-brand-500/30">
               M
             </span>
-            <span className="hidden font-display text-sm font-semibold text-slate-200 transition-colors group-hover:text-white sm:block">
+            <span
+              className={`hidden font-display text-sm font-semibold transition-colors sm:block ${
+                scrolled
+                  ? 'text-white group-hover:text-brand-200'
+                  : 'text-brand-900 group-hover:text-brand-600'
+              }`}
+            >
               Muthu Kumar
             </span>
           </button>
@@ -69,8 +75,12 @@ export default function Navbar() {
                   onClick={() => handleNav(link.id)}
                   className={`relative px-3.5 py-2 text-sm font-medium transition-colors ${
                     active === link.id
-                      ? 'text-white'
-                      : 'text-slate-400 hover:text-slate-200'
+                      ? scrolled
+                        ? 'text-white'
+                        : 'text-brand-900'
+                      : scrolled
+                        ? 'text-white/70 hover:text-white'
+                        : 'text-brand-700/70 hover:text-brand-900'
                   }`}
                 >
                   {link.label}
@@ -92,7 +102,11 @@ export default function Navbar() {
               href={PROFILE.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden h-9 w-9 items-center justify-center rounded-lg text-slate-400 transition-all hover:bg-white/5 hover:text-brand-300 sm:flex"
+              className={`hidden h-9 w-9 items-center justify-center rounded-lg transition-all sm:flex ${
+                scrolled
+                  ? 'text-white/70 hover:bg-white/10 hover:text-white'
+                  : 'text-brand-700/70 hover:bg-brand-500/10 hover:text-brand-900'
+              }`}
               aria-label="LinkedIn"
             >
               <Linkedin size={18} />
@@ -101,14 +115,18 @@ export default function Navbar() {
               href={PROFILE.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden h-9 w-9 items-center justify-center rounded-lg text-slate-400 transition-all hover:bg-white/5 hover:text-white sm:flex"
+              className={`hidden h-9 w-9 items-center justify-center rounded-lg transition-all sm:flex ${
+                scrolled
+                  ? 'text-white/70 hover:bg-white/10 hover:text-white'
+                  : 'text-brand-700/70 hover:bg-brand-500/10 hover:text-brand-900'
+              }`}
               aria-label="GitHub"
             >
               <Github size={18} />
             </a>
             <button
               onClick={() => setOpen(true)}
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-slate-300 lg:hidden"
+              className="flex h-9 w-9 items-center justify-center rounded-lg text-brand-800 lg:hidden"
               aria-label="Open menu"
             >
               <Menu size={22} />
@@ -139,7 +157,7 @@ export default function Navbar() {
             >
               <button
                 onClick={() => setOpen(false)}
-                className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-lg text-slate-400 hover:text-white"
+                className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-lg text-brand-700 hover:text-brand-900"
                 aria-label="Close menu"
               >
                 <X size={22} />
@@ -154,8 +172,8 @@ export default function Navbar() {
                   onClick={() => handleNav(link.id)}
                   className={`rounded-xl px-4 py-3 text-left text-sm font-medium transition-colors ${
                     active === link.id
-                      ? 'bg-brand-500/15 text-white'
-                      : 'text-slate-400 hover:bg-white/5 hover:text-slate-200'
+                      ? 'bg-brand-500/15 text-brand-900'
+                      : 'text-brand-800/70 hover:bg-brand-500/10 hover:text-brand-900'
                   }`}
                 >
                   {link.label}

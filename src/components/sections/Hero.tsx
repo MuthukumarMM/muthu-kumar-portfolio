@@ -69,7 +69,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg text-slate-400"
+              className="text-lg font-medium text-brand-700"
             >
               Hi, I'm
             </motion.p>
@@ -81,7 +81,7 @@ export default function Hero() {
             >
               <span className="text-gradient-animated">Muthu Kumar</span>
               <br />
-              <span className="text-white">M.</span>
+              <span className="text-brand-900">M.</span>
             </motion.h1>
           </div>
 
@@ -90,10 +90,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="flex items-center gap-1 font-mono text-xl text-slate-300 sm:text-2xl"
+            className="flex items-center gap-1 font-mono text-xl text-brand-800 sm:text-2xl"
           >
             <span className="text-brand-400">{`>`}</span>
-            <span className="min-h-[1.5em] text-slate-100">{typed}</span>
+            <span className="min-h-[1.5em] text-brand-900">{typed}</span>
             <span className="inline-block h-6 w-0.5 animate-blink bg-brand-400" />
           </motion.div>
 
@@ -101,7 +101,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.85 }}
-            className="max-w-xl text-base leading-relaxed text-slate-400 sm:text-lg"
+            className="max-w-xl text-base leading-relaxed text-brand-800/80 sm:text-lg"
           >
             {PROFILE.intro}
           </motion.p>
@@ -139,12 +139,12 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 1.15 }}
             className="flex items-center gap-4 pt-2"
           >
-            <span className="text-sm text-slate-500">Connect:</span>
+            <span className="text-sm font-medium text-brand-700/70">Connect:</span>
             <a
               href={PROFILE.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-brand-300"
+              className="group flex items-center gap-2 text-sm text-brand-700 transition-colors hover:text-brand-500"
             >
               <Linkedin size={18} />
               <span className="hidden sm:inline">LinkedIn</span>
@@ -153,7 +153,7 @@ export default function Hero() {
               href={PROFILE.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-white"
+              className="group flex items-center gap-2 text-sm text-brand-700 transition-colors hover:text-brand-500"
             >
               <Github size={18} />
               <span className="hidden sm:inline">GitHub</span>
